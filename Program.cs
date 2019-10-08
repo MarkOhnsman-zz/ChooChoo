@@ -1,4 +1,5 @@
 ﻿using System;
+using tickets.Controllers;
 using tickets.Models;
 
 namespace tickets
@@ -7,8 +8,8 @@ namespace tickets
     {
         static void Main(string[] args)
         {
-            App app = new App();
-            app.Run();
+            Console.Clear();
+            new TicketController().Run();
         }
     }
 }

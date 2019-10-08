@@ -1,19 +1,16 @@
 using System;
+using tickets.Interfaces;
 
 namespace tickets.Models
 {
-    class Ticket
+    class Ticket : ITicket
     {
         public string Title { get; private set; }
-        private string Description { get; set; }
+        public string Description { get; set; }
 
-        public void PrintDescription()
+        public string GetTemplate()
         {
-            Console.WriteLine($@"
-Title: {Title}            
-Description: {Description}
-            ");
-
+            return $"Title: {Title}\nDescription: {Description}";
         }
 
         public Ticket(string title, string desc)
